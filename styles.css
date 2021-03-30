@@ -1,0 +1,192 @@
+* { box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    background: #eee;
+    color: hsl(234, 12%, 34%);
+}
+
+article {
+  position: relative;
+  margin: 50px auto;
+  width: 450px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+article::before,
+article::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background: inherit;
+  box-shadow: inherit;
+
+  transform: rotate(3deg);
+}
+
+article::after 
+{ transform: rotate(-1deg) }
+
+article:hover{
+    transform: rotate(8deg);
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.image{
+    display: flex;
+    position: relative; 
+    padding-top: 40px;
+    justify-content: center;      
+}
+
+.circle{
+    height: 150px;
+    width: 150px;
+
+    top:20px;
+
+    border-radius: 50%;
+    background-color: #accdc6;
+    opacity: .6;
+}
+
+.image>img{
+    position: absolute;
+    
+    height: 150px;
+    width: 150px;
+
+    top: 80px;
+
+    border-radius: 50%;
+    border: 3px solid mintcream;
+}
+
+.name, .lastname{
+    margin: 1px;
+    top: 300px;
+
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;    
+}
+
+.name{
+    margin-top: 40px;
+
+    font-size: 2em;
+    font-weight: 200;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+
+.hello-box{
+    margin: auto;
+    display: table;
+
+}
+
+h3{
+    position: relative;
+    margin: 15px;
+    
+    text-align: center;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 2em;
+    color: #accdc6;
+}
+
+h3>span{
+    position: absolute;
+    width: 0;
+    right: 0;
+
+    background: #fff;
+    border-left: 1px solid #accdc6;
+
+    animation: hello 5s infinite alternate steps(7);    
+}
+
+@keyframes hello{
+    from{
+        width: 100%;
+    }
+
+    to{
+        width: 0;
+    }
+
+}
+
+h5{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: .6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    margin: 1px;
+}
+
+p{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: .7em;
+    text-align: center;
+    font-weight: 600;
+}
+
+a{
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: hsl(234, 12%, 34%);
+}
+
+.contact{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.contact>div{
+    text-align: center;
+}
+
+.contact>div>a, .contact>div>p{
+    text-transform: lowercase;
+    font-size: .6em;
+    font-weight: 600;
+}
+
+.border{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgray
+}
+
+
+
